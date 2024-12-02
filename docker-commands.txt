@@ -28,10 +28,10 @@ Run Node API Container
 ---------------------
 
 docker run --name goals-backend \
-  -e MONGODB_USERNAME=cagatay \
-  -e MONGODB_PASSWORD=secret \
+  -e MONGODB_USERNAME=<username> \
+  -e MONGODB_PASSWORD=<password> \
   -v logs:/app/logs \
-  -v /Users/cagataykaban/Desktop/docker-kpi-docs-udemy/compose-01-starting-setup/backend:/app \
+  -v /<projectLocalPath>/backend:/app \
   -v /app/node_modules \
   --rm \
   -d \
@@ -50,7 +50,7 @@ Run React SPA Container
 ---------------------
 
 docker run --name goals-frontend \
-  -v /Users/cagataykaban/Desktop/docker-kpi-docs-udemy/compose-01-starting-setup/frontend/src:/app/src \
+  -v /<projectLocalPath>/frontend/src:/app/src \
   --rm \
   -d \
   -p 3000:3000 \
